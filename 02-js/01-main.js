@@ -33,7 +33,7 @@ async function cargarUsuarios() {
   try {
     // Agregar un parámetro único a la URL para evitar caché
         //const url = `https://raram.eljotita.com/rank?timestamp=${Date.now()}`;
-        const url = "/03-assets/usersExample/users.txt";
+        const url = "./03-assets/usersExample/users.txt";
 
     let respuestas = await fetch(url, { cache: "no-store" });
     let data = await respuestas.json();
@@ -82,9 +82,9 @@ function mostrarUsuarios(data) {
     <section class="ranking-container">
       <article class="ranking-container-nick article">
         <h3 class="ranking-h3">
-          ${user.rank === 1 ? `<img class="ranking-img-puesto1" src="../03-assets/img/08-puesto1.png" alt="Puesto1" />` : ''}
-          ${user.rank === 2 ? `<img class="ranking-img-puesto2" src="../03-assets/img/09-puesto2.png" alt="Puesto2" />` : ''}
-          ${user.rank === 3 ? `<img class="ranking-img-puesto3" src="../03-assets/img/10-puesto3.png" alt="Puesto3" />` : ''}
+          ${user.rank === 1 ? `<img class="ranking-img-puesto1" src="../LeagueManagerOld/03-assets/img/08-puesto1.png" alt="Puesto1" />` : ''}
+          ${user.rank === 2 ? `<img class="ranking-img-puesto2" src="../LeagueManagerOld/03-assets/img/09-puesto2.png" alt="Puesto2" />` : ''}
+          ${user.rank === 3 ? `<img class="ranking-img-puesto3" src="../LeagueManagerOld/03-assets/img/10-puesto3.png" alt="Puesto3" />` : ''}
           ${user.name.split('#')[0]}
         </h3>
       </article>
