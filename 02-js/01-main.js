@@ -33,7 +33,7 @@ async function cargarUsuarios() {
   try {
     // Agregar un parámetro único a la URL para evitar caché
         //const url = `https://raram.eljotita.com/rank?timestamp=${Date.now()}`;
-        const url = "/03-assets/usersExample/users.txt";
+        const url = "03-assets/usersExample/users.txt";
 
     let respuestas = await fetch(url, { cache: "no-store" });
     let data = await respuestas.json();
