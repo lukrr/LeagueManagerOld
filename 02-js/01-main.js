@@ -316,7 +316,7 @@ function marcarYournick() {
 
 async function cargarHistorial() {
   try {
-    let respuestas = await fetch("../03-assets/data/historial.txt", { cache: "force-cache" });
+    let respuestas = await fetch("../LeagueManagerOld/03-assets/data/historial.txt", { cache: "force-cache" });
     let data = await respuestas.json();
     // Ordenar los datos por id al cargar (ID = Nº de partida)
     data.sort((a, b) => b.id - a.id);
