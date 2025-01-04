@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="lol, league of legends, leaguemanager, bot">
+    <meta name="description" content="Esta es una página de un bot de partidas personalizadas de League of legends.">
+    <meta name="author" content="URU_Kody">
+    <meta name="robots" content="index">
+
+    <link rel="stylesheet" type="text/css" href="01-css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/header.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/socialmedia.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/ranking.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/historial.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/reload.css" />
+    <link rel="stylesheet" type="text/css" href="01-css/yournick.css" />
+
+    <link rel="icon" type="favicon/x-icon" href="03-assets/img/01-logo.png" />
+
+    <title>LeagueManager</title>
+
+</head>
+
+<body>
+
+    <!-- Inicio página 1 -->
+
+    <div class="layout">
+
+        <!-- Estrellas -->
+        <div class='body-stars'>
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+        </div>
+
+        <div class="body-reload">
+            <i class="body-reload-icon fa-solid fa-rotate"></i>
+        </div>
+
+        <div class="body-yournick">
+            <i class="body-yournick-icon fa-brands fa-odnoklassniki"></i>
+        </div>
+
+        <div class="body-yournick-container">
+            <div class="body-yournick-div">
+                <span class="body-yournick-span1">¿Cuál es tu nick?</span>
+                <span class="body-yournick-span2">Escríbelo tal cual, este aparecerá resaltado entre los demás en la
+                    sección "ranking".</span>
+                <span class="body-yournick-span3">Ejemplo: Leafcutter Bee#LAS</span>
+                <input type="text" class="body-yournick-input" id="yournick" placeholder="Escribe tu nick...">
+                <div class="body-yournick-buttons">
+                    <button class="body-yournick-button1">Cancelar</button>
+                    <button class="body-yournick-button2">Confirmar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class='header-group'>
+            <div class='header-box1'>
+                <div>
+                    <img class='header-logo' src='03-assets/img/01-logo.png' alt='Logo'></img>
+                </div>
+                <h1 class='header-title'>LeagueManager 2.0</h1>
+            </div>
+            <div class='header-box2'>
+                <span class="header-link header-link-ranking">Ranking</span>
+                <span class="header-link header-link-jugadores">Jugadores</span>
+                <span class="header-link header-link-historial">Historial</span>
+            </div>
+        </header>
+
+        <!-- Socialmedia -->
+        <div class='socialmedia-box'>
+            <a href='https://www.twitch.tv/eljotita' target='_blank'>
+                <img class='socialmedia-icon' src='03-assets/img/03-twitch.png' alt="Logo"></img>
+            </a>
+            <a href='https://discord.gg/PwnN9Qyd8H' target='_blank'>
+                <img class='socialmedia-icon' src='03-assets/img/02-discord.png' alt="Logo"></img>
+            </a>
+            <a href='https://www.instagram.com/jotajotun/' target='_blank'>
+                <img class='socialmedia-icon' src='03-assets/img/06-instagram.png' alt="Logo"></img>
+            </a>
+            <a href='https://www.youtube.com/@eljotita/videos' target='_blank'>
+                <img class='socialmedia-icon' src='03-assets/img/07-youtube.png' alt="Logo"></img>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class='footer-center'>
+            <div class='footer-box'>
+                <p class='footer-text'>LeagueManager 2025 © v2.0</p>
+                <p class='footer-text'>Desarrollado por
+                    <a class='footer-text-dev' href="https://www.youtube.com/@urukody5339/videos" target='_blank'>
+                        URU Kody</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Contenedor ranking -->
+        <div class="ranking-containers">
+            <section class="ranking-container-unique">
+                <article class="ranking-container-nick-unique article-unique" id="ranking-order-nombre">
+                    <h3 class="ranking-h3-unique">NOMBRE</h3>
+                </article>
+                <article class="ranking-container-elo-unique article-unique" id="ranking-order-elo">
+                    <h3 class="ranking-h3-unique">ELO</h3>
+                </article>
+                <article class="ranking-container-puesto-unique article-unique" id="ranking-order-ranking">
+                    <h3 class="ranking-h3-unique">PUESTO</h3>
+                </article>
+                <article class="ranking-container-racha-unique article-unique" id="ranking-order-racha">
+                    <h3 class="ranking-h3-unique">RACHA</h3>
+                </article>
+                <article class="ranking-container-victorias-unique article-unique" id="ranking-order-victorias">
+                    <h3 class="ranking-h3-unique">VICTORIAS</h3>
+                </article>
+                <article class="ranking-container-derrotas-unique article-unique" id="ranking-order-derrotas">
+                    <h3 class="ranking-h3-unique">DERROTAS</h3>
+                </article>
+                <article class="ranking-container-winrate-unique article-unique" id="ranking-order-winrate">
+                    <h3 class="ranking-h3-unique">WINRATE</h3>
+                </article>
+            </section>
+
+            <!-- Contenedor ranking lista jugadores -->
+            <div id="ranking-container-div" class="ranking-container-div">
+
+            </div>
+
+        </div>
+
+        <!-- Contenedor historial -->
+        <div class="historial-search-container">
+            <input type="text" class="historial-search-input" id="buscador" placeholder="Buscar por nombre...">
+            <span class="icono-lupa"><i class="fas fa-search"></i></span>
+        </div>
+
+        <div class="historial-containers">
+
+        </div>
+
+        <!-- Fin página 1 -->
+
+        <!-- Inicio Scripts -->
+
+        <script src="https://kit.fontawesome.com/a3975dc31c.js" crossorigin="anonymous"></script>
+        <script src="02-js/01-main.js" defer> </script>
+
+        <!-- Fin Scripts -->
+
+</body>
+
+</html>

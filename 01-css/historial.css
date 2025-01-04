@@ -1,0 +1,237 @@
+/*?----------------------------------------------------------------------------------------------------*/
+
+/** Inicio historial */
+
+.historial-containers {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+    overflow-y: auto;
+    height: 69rem;
+    padding-right: 1rem;
+}
+
+.historial-caja {
+    width: 100%;
+    height: 16.4rem;
+    min-height: 16.4rem;
+    margin-bottom: 1rem;
+    user-select: none;
+}
+
+.historial-cajita {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.historial-caja:hover .historial-cajita {
+    transform: rotateY(180deg);
+}
+
+.historial-caja-frontal,
+.historial-caja-trasera {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.historial-caja:nth-child(even) .historial-caja-frontal {
+    background-color: rgba(106, 78, 119, 0.8);
+    border: 1rem rgba(106, 78, 119, 0.8);
+}
+
+.historial-caja:nth-child(odd) .historial-caja-frontal {
+    background-color: rgba(77, 59, 100, 0.8);
+    border: 1rem rgba(77, 59, 100, 0.8);
+}
+
+.historial-caja-trasera {
+    background-color: #2f143d;
+    border: 1rem #2f143d;
+}
+
+/** Estilo de las partidas parte delantera (Datos y tal) */
+
+.historial-caja-frontal {
+    border-radius: 1rem;
+    transform: rotateY(0deg);
+}
+
+.historial-caja-frontal-general {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.historial-caja-frontal-ladoazul,
+.historial-caja-frontal-ladocentral,
+.historial-caja-frontal-ladorojo {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.historial-caja-frontal-ladoazul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: #2380e4;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.historial-caja-frontal-ladocentral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.historial-caja-frontal-ladocentral-span1 {
+    font-size: 4.5rem;
+    color: #ddd;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.historial-caja-frontal-ladocentral-span2 {
+    font-size: 2.5rem;
+    color: #ddd;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.historial-caja-frontal-ladocentral-span3 {
+    font-size: 1.6rem;
+    color: #ddd;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.1rem;
+    margin-top: -0.2rem;
+}
+
+.historial-caja-frontal-ladorojo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: #e4595a;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+/** Estilos de la partida parte trasera */
+
+.historial-caja-trasera {
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+}
+
+.historial-caja-trasera-general {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.historial-caja-trasera-ladoazul,
+.historial-caja-trasera-ladorojo {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.historial-caja-trasera-ladoazul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    color: #2380e4;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+    padding-left: 1rem;
+}
+
+.historial-caja-trasera-ladorojo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    color: #e4595a;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.historial-span-promedioazul,
+.historial-span-promediorojo {
+    color: #ddd;
+}
+
+/** Buscador */
+
+.historial-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 2rem;
+    height: 5rem;
+    min-height: 5rem;
+}
+
+.historial-search-input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    color: #ddd;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+    background-color: #2f143d;
+    border: 0.2rem #2f143d;
+    border-radius: 1rem;
+    padding-left: 1.5rem;
+    outline: none;
+}
+
+.icono-lupa {
+    position: absolute;
+    right: 1.5rem;
+    color: #ddd;
+}
+
+.icono-lupa i {
+    font-size: 2rem;
+}
+
+.resaltado {
+    color: #e3f15b;
+}
+
+.historial-sin-resultados {
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #e4595a;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+}
+
+/** Fin historial */
+
+/*?----------------------------------------------------------------------------------------------------*/

@@ -1,0 +1,128 @@
+/*?----------------------------------------------------------------------------------------------------*/
+
+/** Inicio ranking */
+
+.ranking-containers {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    overflow-y: auto;
+    height: 74.8rem;
+}
+
+.ranking-container-div {
+    width: 100%;
+}
+
+.ranking-container-unique {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(47, 20, 61, 0.8);
+    color: #2380e4;
+    position: sticky;
+    top: 0;
+}
+
+.ranking-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.article-unique {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.ranking-container:nth-child(even) {
+    background-color: rgba(77, 59, 100, 0.8);
+}
+
+.ranking-container:nth-child(odd) {
+    background-color: rgba(106, 78, 119, 0.8);
+}
+
+.ranking-h3 {
+    font-size: 2.5rem;
+    color: #ddd;
+}
+
+.ranking-h3-unique {
+    font-size: 2.3rem;
+    user-select: none;
+}
+
+.ranking-h3-pocosgames {
+    font-size: 2.5rem;
+    color: #ddd;
+}
+
+.article-unique {
+    cursor: pointer;
+}
+
+.ranking-img-puesto1,
+.ranking-img-puesto2,
+.ranking-img-puesto3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.ranking-h3-victorias {
+    color: #69d765;
+}
+
+.ranking-h3-derrotas {
+    color: #e4595a;
+}
+
+/** Fin ranking */
+
+/** Inicio cargando */
+
+.ranking-loading {
+    position: absolute;
+    border: 16px solid #eee;
+    border-top: 16px solid #2380e4;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+    top: 20rem;
+    left: 47%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/** Fin cargando */
+
+/*?----------------------------------------------------------------------------------------------------*/
